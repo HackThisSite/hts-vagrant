@@ -1,6 +1,5 @@
 hts-vagrant
 ===========
-Deploy a virtual machine via vagrant with hackthissite/hackthissite preloaded.
 
 Just Do It
 ----------
