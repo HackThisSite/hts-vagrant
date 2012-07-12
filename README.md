@@ -1,12 +1,12 @@
 hts-vagrant
 ===========
-The ultimate way to deploy a developer environment without wasting time.
+Deploy a virtual machine via vagrant with hackthissite/hackthissite preloaded.
 
 Just Do It
 ----------
 ```
-git clone --recurse git@github.com:HackThisSite/hts-vagrant.git
+git clone --recursive git@github.com:HackThisSite/hts-vagrant.git
 cd hts-vagrant
-vagrant up
-vagrant ssh
+vagrant up # loads the vm and builds the environment
+vagrant ssh # ssh into the vm
 ```

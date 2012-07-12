@@ -1,6 +1,0 @@
-[submodule "data/htsdev"]
-	path = data/htsdev
-	url = git://git.hackthissite.org/htsdev.git
-[submodule "modules/nginx"]
-	path = modules/nginx
-	url = https://github.com/BenoitCattie/puppet-nginx.git
