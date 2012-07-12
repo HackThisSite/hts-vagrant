@@ -1,6 +1,6 @@
 hts-vagrant
 ===========
-The ultimate way to deploy a developer environment without wasting time.
+The ultimate way to deploy a developer environment preloaded with HackThisSite without wasting time.
 
 Just Do It
 ----------
