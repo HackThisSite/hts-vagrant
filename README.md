@@ -5,7 +5,7 @@ The ultimate way to deploy a developer environment preloaded with HackThisSite w
 Just Do It
 ----------
 ```
-git clone --recurse git@github.com:HackThisSite/hts-vagrant.git
+git clone --recursive git@github.com:HackThisSite/hts-vagrant.git
 cd hts-vagrant
 vagrant up
 vagrant ssh
