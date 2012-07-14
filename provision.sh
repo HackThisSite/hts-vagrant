@@ -11,18 +11,16 @@ APT='apt-get -f -y --force-yes'
 echo 'deb http://packages.dotdeb.org stable all' >> /etc/apt/sources.list
 echo 'deb-src http://packages.dotdeb.org stable all' >> /etc/apt/sources.list
 
-# Update, upgrade, install deps.
-# We try to keep upgraded bases on the vagrant boxes hosted on hts
-# so that upgrade doesn't take hours.
+# Update.
 $APT update
-$APT upgrade
+# $APT upgrade
 
 # Just some depends
 $APT install git libpcre3-dev sqlite3
 
 # PHP
 $APT install php5-dev php5-fpm php-apc php-pear php5-sqlite
-pecl install apc bbcode mongo
+yes | pecl install apc bbcode mongo
 update-rc.d php5-fpm defaults
 
 # Nginx
@@ -52,8 +50,8 @@ cd phpredis
 phpize; ./configure; make && make installl; cd
 
 # MsgPack for php
-pecl channel-discover php-msgpack.googlecode.com/svn/pecl
-pecl install msgpack/msgpack-beta
+yes | pecl channel-discover php-msgpack.googlecode.com/svn/pecl
+yes | pecl install msgpack/msgpack-beta
 
 # BrowsCap
 cp $CONFIGS/php_browscap.ini /etc/php5/conf.d/

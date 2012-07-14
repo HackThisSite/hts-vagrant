@@ -7,14 +7,9 @@ Vagrant::Config.run do |config|
   # config.vm.box = "debian664"
   # config.vm.box_url = "http://dev.hackthissite.org/vagrant/debian664.box"
 
-  config.vm.host_name = "htsdev"
+  config.vm.host_name = "dev.hts"
 
-  # Change the 
-  config.vm.network :hostonly, "172.13.37.99"
-  # config.vm.network :hostonly, "192.13.37.99"
-  # config.vm.network :hostonly, "10.13.37.99"
-
-  # Uncomment this to have the vm act as a device on the network you are connected to.
+  config.vm.network :hostonly, "10.99.99.99"
   # config.vm.network :bridged
 
   config.vm.forward_port 80, 8080
