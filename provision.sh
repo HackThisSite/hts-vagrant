@@ -65,3 +65,11 @@ rm /etc/nginx/sites-enabled/default
 ln -s /etc/nginx/sites-available/hackthissite /etc/nginx/sites-enabled/
 mkdir $HTS/application/configs/servers/dev.hts
 cp $CONFIGS/override.php $HTS/application/configs/servers/dev.hts/override.php
+
+# Start Stuff
+INIT='/etc/init.d/'
+nginx start
+php5-fpm start
+mongodb start
+redis start
+elasticsearch start
