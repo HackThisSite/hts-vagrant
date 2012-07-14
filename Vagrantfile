@@ -7,7 +7,7 @@ Vagrant::Config.run do |config|
   # config.vm.box = "debian664"
   # config.vm.box_url = "http://dev.hackthissite.org/vagrant/debian664.box"
 
-  config.vm.host_name = "dev.hts"
+  config.vm.host_name = "htsdev"
 
   config.vm.network :hostonly, "10.99.99.99"
   # config.vm.network :bridged
