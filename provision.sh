@@ -77,8 +77,8 @@ cp $CONFIGS/override.php $HTS/application/configs/servers/dev.hts/override.php
 
 # Start Stuff
 echo Starting all needed servers.
-nginx start
-php5-fpm start
-mongodb start
-redis start
-elasticsearch start
+$INIT nginx start
+$INIT php5-fpm start
+$INIT mongodb start
+$INIT redis start
+$INIT elasticsearch start
