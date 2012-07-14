@@ -47,7 +47,7 @@ $APT install openjdk-6-jre-headless
 curl -OL https://github.com/downloads/elasticsearch/elasticsearch/elasticsearch-0.19.8.zip
 unzip elasticsearch-* && rm elasticsearch-*.zip
 mv elasticsearch-* /usr/local/elasticsearch
-mv /data/configs/elasticsearch-initscript /etc/init.d/elasticsearch
+cp /data/configs/elasticsearch-initscript /etc/init.d/elasticsearch
 chmod +x /etc/init.d/elasticsearch
 update-rc.d elasticsearch defaults
 
@@ -80,5 +80,5 @@ echo Starting all needed servers.
 $INIT/nginx start
 $INIT/php5-fpm start
 $INIT/mongodb start
-$INIT/redis start
+$INIT/redis-server start
 $INIT/elasticsearch start
