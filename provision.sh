@@ -42,7 +42,7 @@ $APT install redis-server redis-doc
 update-rc.d redis defaults
 
 # ElasticSearch - please try to keep the elastic link updated.
-echo Installing ElasticSearch
+echo Installing ElasticSearch.
 $APT install openjdk-6-jre-headless
 curl -OL https://github.com/downloads/elasticsearch/elasticsearch/elasticsearch-0.19.8.zip
 unzip elasticsearch-* && rm elasticsearch-*.zip
@@ -52,10 +52,11 @@ chmod +x /etc/init.d/elasticsearch
 update-rc.d elasticsearch defaults
 
 # phpredis
-echo Installing phpredis
-git clone https://github.com/nicolasff/phpredis.git /tmp/phpredis
+echo Installing phpredis.
+git clone https://github.com/nicolasff/phpredis.git
 cd phpredis
-phpize; ./configure; make && make installl; cd
+phpize; ./configure; make && make installl
+cd .. ; rm -rf phpredis
 
 # MsgPack for php
 echo Installing MsgPack for PHP.
